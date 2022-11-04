@@ -1,0 +1,28 @@
+### show all
+GET http://localhost:3000/songs/1
+
+### update
+PATCH http://localhost:3000/songs/1
+Content-Type: application/json
+
+{
+  "lyrics": "Magic is Easy",
+  "duration": 100,
+  "artist": "Guerilla Toss"
+}
+
+###show
+GET http://localhost:3000/songs/5
+
+### create
+POST http://localhost:3000/songs
+Content-Type: application/json
+
+{
+  "lyrics": "Jackie's Daughter",
+  "duration": 200,
+  "artist": "Guerilla Toss"
+}
+
+### destroy
+DELETE http://localhost:3000/songs/3
