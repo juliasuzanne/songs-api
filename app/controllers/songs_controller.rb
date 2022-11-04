@@ -7,7 +7,7 @@ class SongsController < ApplicationController
   def show
     song_id = params[:id]
     song = Song.find_by(id: song_id)
-    render json: { artist: song.lyrics,
+    render json: { artist: song.artist,
                    string: song.stringify }
   end
 
@@ -17,6 +17,7 @@ class SongsController < ApplicationController
     song.artist = params[:artist] || song.artist
     song.duration = params[:duration] || song.duration
 
+    song.save
     render json: song.as_json
   end
 
