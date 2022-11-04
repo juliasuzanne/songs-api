@@ -1,0 +1,6 @@
+@songs.map do |song|
+  {
+    id: song.id,
+    url: song_url(song, format: :json)
+  }
+end
